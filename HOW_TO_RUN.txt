@@ -1,0 +1,38 @@
+
+Install
+
+
+# STEP 1: Unzip and navigate INTO the project folder
+unzip VirtualLab_Django_Project.zip
+cd virtuallab_project              
+ls                                  
+
+# STEP 2: Create and activate virtual environment
+python -m venv venv
+
+# On Linux/Mac:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+
+# STEP 3: Install Django
+pip install -r requirements.txt
+
+# STEP 4: Run migrations (creates the database)
+python manage.py makemigrations
+python manage.py migrate
+
+# STEP 5: Load demo data
+python manage.py seed_data
+
+# STEP 6: Start the server
+python manage.py runserver
+
+# STEP 7: Open in browser
+# http://127.0.0.1:8000/
+#
+# Login credentials:
+#   Admin:   http://127.0.0.1:8000/admin-panel/   → admin / admin123
+#   Student: http://127.0.0.1:8000/               → student1 / student123
+
